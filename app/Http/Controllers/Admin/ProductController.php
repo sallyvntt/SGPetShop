@@ -71,7 +71,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        
+        //
     }
 
     /**
@@ -94,10 +94,29 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $product->update($request->all());
+        $prodData = $request->all();
+        $prodData['slug'] = \Str::slug($request->name);
+        if($request->hasFile('photo'))
+        {
+            $file=$request->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            if($extension != 'jpg' && $extension != 'png' && $extension !='jpeg')
+            {
+                return view('admin.product.create')
+                    ->with('loi','Bạn chỉ được chọn file có đuôi jpg,png,jpeg');
+            }
+            $imageName = $file->getClientOriginalName();
+            $file->move("images",$imageName);
+            $prodData['image'] = $imageName;
+        }
+        else
+        {
+            $imageName=null;
+        }
+        
+        $product->update($prodData);
         return redirect()->route('admin.product.index');
     }
-
 
     /**
      * Remove the specified resource from storage.
@@ -110,5 +129,4 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('admin.product.index');
     }
-
 }
