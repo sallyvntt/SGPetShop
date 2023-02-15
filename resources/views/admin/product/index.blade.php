@@ -41,7 +41,7 @@
                   <th style="width: 10%">Id</th>
                   <th style="width: 20%">Name</th>
                   <th style="width: 20%">Price</th>  
-                  <th style="width: 10%">Stock</th>
+                  <!-- <th style="width: 10%">Stock</th> -->
                   <th style="width: 10%">Saled</th>
                   <th style="width: 10%">Image</th>
 
@@ -57,7 +57,7 @@
                   <td>{{ $item->id }}</td>   
                   <td>{{ $item->name }}</td>
                   <td>{{ $price=number_format($item->price) }}</td>
-                  <td>{{ $item->stock }}</td>
+                  <!-- <td>{{ $item->stock }}</td> -->
                   <td></td>
                   <td >
                     @if (!empty($item->image))
