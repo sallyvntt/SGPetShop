@@ -64,10 +64,10 @@
               <label for="price">Price</label>
               <input type="price" id="price" name="price" class="form-control" value="{{  $price=number_format($product->price) }}">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="stock">Stock</label>
               <input type="number" id="stock" name="stock" class="form-control" value="{{ $product->stock }}">
-            </div>
+            </div> -->
             <div class="form-group">
               <label for="image">Image</label>
               <img src="{{asset('/images/' .$product->image)}}" width="150px" height="200px">
