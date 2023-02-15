@@ -62,10 +62,10 @@
               <label for="price">Price</label>
               <input type="number" id="price" name="price" class="form-control">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="stock">Stock</label>
               <input type="number" id="stock" name="stock" class="form-control">
-            </div>
+            </div> -->
             <div class="form-group">
               <label for="image">Image</label>
               <input type="file" id="image" name="photo" class="form-control">
