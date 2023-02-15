@@ -58,11 +58,14 @@
             </div>
             <div class="form-group">
               <label for="description">Description</label>
-              <textarea rows="4" cols="50" type="text" id="desc" name="description" class="form-control" >{{$product->description}}</textarea>
+              <textarea rows="4" cols="50" type="text" id="description" name="description" class="form-control" >{{$product->description}}</textarea>
             </div>
             <div class="form-group">
               <label for="price">Price</label>
-              <input type="price" id="price" name="price" class="form-control" value="{{  $price=number_format($product->price) }}">
+              <!-- @php
+              $price=number_format($product->price) ;
+              @endphp -->
+              <input type="text" id="price" name="price" class="form-control" value="{{ $product->price}}">
             </div>
             <!-- <div class="form-group">
               <label for="stock">Stock</label>
@@ -70,8 +73,8 @@
             </div> -->
             <div class="form-group">
               <label for="image">Image</label>
-              <img src="{{asset('/images/' .$product->image)}}" width="150px" height="200px">
-              <input type="file" id="image" name="image" class="form-control" value="{{ $product->image }}">
+              <img src="{{asset('/images/'.$product->image)}}" width="150px" height="200px">
+            <input type="file" id="image" name="photo" class="form-control-file" value="{{$product->image}}">
             </div>
             <input type="submit" value="Update" class="btn btn-success">
           </form>
