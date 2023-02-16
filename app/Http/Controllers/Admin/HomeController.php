@@ -21,8 +21,9 @@ class HomeController extends Controller
     {
         $prods = Product::all();
         $order = Order::all();
+        $ord = OrderDetail::all();
         $user = User::all();
-        return view ('admin.homedb',compact('prods' , 'order','user'));
+        return view ('admin.homedb',compact('prods' , 'order','user','ord'));
     }
 
 }
