@@ -9,7 +9,7 @@
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="{{ Route('admin.home') }}">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ Route('admin.homedb') }}">Home</a></li>
           <li class="breadcrumb-item active">Manage By Admin</li>
         </ol>
       </div>
@@ -18,7 +18,7 @@
             @php
             $countprods=count($prods);
             $countorder=count($order);
-            $q = count($order->quantity);
+            
             $countuser=count($user);
             @endphp
 </section>
@@ -76,7 +76,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{$countorder}}</h3>
+                <h3>{{$countuser}}</h3>
 
                 <p>Total Member</p>
               </div>
