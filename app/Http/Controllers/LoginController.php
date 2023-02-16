@@ -20,7 +20,7 @@ class LoginController extends Controller
             // save user to session
             $request->session()->put('user', $user);
             if ($user->role == 1) {
-                return redirect()->route('admin.home');
+                return redirect()->route('admin.homedb');
             } else {
                 return redirect('/');
             }
