@@ -52,6 +52,8 @@ Route::group(['middleware'=>'canLogin'], function() {
         // cần admin mới truy cập
         Route::get('/', [HomeController::class, 'index'])->name('home');
 
+        Route::get('/homedb', [HomeController::class, 'homedb'])->name('homedb');
+
         Route::resource('/user', UserController::class);
 
         Route::resource('/product', ProductController::class);
