@@ -77,6 +77,7 @@ class HomeController extends Controller
     public function clearCart(Request $request) 
     {
         $request->session()->forget('cart');
+        return view ('fe.viewCart');
     }
     public function changeCartItem(Request $request)
     {
