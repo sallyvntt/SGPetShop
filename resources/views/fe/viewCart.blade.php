@@ -46,7 +46,7 @@
 
               $total += $item->quantity * $item->product->price;
               $count += $item->quantity;
-              $total2=number_format($total);
+              
               @endphp
               <div class="delete">
                 <a href="#" class="btn btn-delete" title="" data-id="{{$item->product ->id}}">
@@ -66,9 +66,9 @@
     <div class="summary">
       <div class="order-summary">
         <h4 class="title-box">Order Summary</h4>
-        <p class="summary-info"><span class="title">Subtotal</span><b class="index">{{ $total2 }} VND</b></p>
+        <p class="summary-info"><span class="title">Subtotal</span><b class="index">{{ number_format($total) }} VND</b></p>
         <p class="summary-info"><span class="title">Shipping</span><b class="index">Free Shipping</b></p>
-        <p class="summary-info total-info "><span class="title">Total</span><b class="index">{{ $total2}} VND</b></p>
+        <p class="summary-info total-info "><span class="title">Total</span><b class="index">{{ number_format($total)}} VND</b></p>
       </div>
       <div class="checkout-info">
         <label class="checkbox-field">
