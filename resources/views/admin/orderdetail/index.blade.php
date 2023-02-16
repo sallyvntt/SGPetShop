@@ -24,7 +24,7 @@
   <div class="card">
 
     <div class="card-header">
-      <h3 class="card-title">OrderDetail List  {{$sum}}</h3>
+      <h3 class="card-title">OrderDetail List </h3>
 
 
       <div class="card-tools">
@@ -61,7 +61,7 @@
                   
                   <td>{{ number_format($item->price) }}</td>
                   <td>{{ $item->quantity }}</td>
-                  <td>{{ $money = number_format($item->price * $item->quantity) }}</td>              
+                  <td>{{ number_format($item->price * $item->quantity) }}</td>              
                   <td class="project-actions text-right">
             
                       <!-- <a class="btn btn-primary btn-sm" href="#">
@@ -69,12 +69,12 @@
                           </i>
                           View
                       </a> -->
-                      <a class="btn btn-info btn-sm" href="/*{{ Route('admin.product.edit', $item->id) }}*/">
+                      <a class="btn btn-info btn-sm" href="#">
                           <i class="fas fa-pencil-alt">
                           </i>
                           Edit
                       </a>
-                      <form action="{{ Route('admin.product.destroy', $item->id) }}" method="post" style="display:inline-block">
+                      <form action="#" method="post" style="display:inline-block">
                         @csrf
                         @method("delete")
                         <button type="submit" class="btn btn-danger btn-sm">
@@ -92,7 +92,6 @@
     <!-- /.card-body -->
   </div>
   <!-- /.card -->
-<h1></h1>
 
 </section>
 @endsection
