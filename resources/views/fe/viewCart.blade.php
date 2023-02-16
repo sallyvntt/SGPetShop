@@ -37,17 +37,11 @@
                   <a class="btn btn-reduce" href="#"></a>
                 </div>
               </div>
-              @php
-              $totalId=$item->quantity * $item->product->price ;
-              $totalId=number_format($totalId);
-              @endphp
-              <div class="price-field sub-total"><p class="price">{{ $totalId }} VND</p></div>
+              <div class="price-field sub-total"><p class="price">{{number_format($item->quantity * $item->product->price)}} VND</p></div>
               @php
 
-              $total += $item->quantity * $item->product->price;
-              $count += $item->quantity;
-              
-              @endphp
+              $total += $item->quantity * $item->product->price;                    
+             @endphp
               <div class="delete">
                 <a href="#" class="btn btn-delete" title="" data-id="{{$item->product ->id}}">
                   <span>Delete from your cart</span>
@@ -78,7 +72,7 @@
         <a class="link-to-shop" href="{{Route('home')}}">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
       </div>
       <div class="update-clear">
-        <a class="btn btn-clear" href="#">Clear Shopping Cart</a>
+        <a class="btn btn-clear" href="{{Route('clearCart')}}">Clear Shopping Cart</a>
         <a class="btn btn-update" href="#">Update Shopping Cart</a>
       </div>
     </div>
