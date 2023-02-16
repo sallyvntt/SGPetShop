@@ -22,11 +22,9 @@
 
   <!-- Default box -->
   <div class="card">
-                    @php                                      
-                    $money = $ord->price * $ord->quantity;
-                    @endphp
+
     <div class="card-header">
-      <h3 class="card-title">OrderDetail List {{count($money)}}</h3>
+      <h3 class="card-title">OrderDetail List  {{$sum}}</h3>
 
 
       <div class="card-tools">
