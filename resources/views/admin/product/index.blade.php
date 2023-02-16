@@ -23,8 +23,12 @@
   <!-- Default box -->
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Products List</h3>
-
+      
+                @php
+                $countprods = count($prods);
+                @endphp
+      <h3 class="card-title">Having : {{$countprods}}  Products in List</h3>
+      
       <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
           <i class="fas fa-minus"></i>
@@ -64,6 +68,8 @@
                     <img src="{{asset('images/'.$item->image)}}" alt="{{$item->name}}" style="width: 100px; height:auto">
                     @endif
                   </td>
+
+                
                   
                   <td class="project-actions text-right">
                     
@@ -87,6 +93,7 @@
                         </button>
                       </form>
                   </td>
+                  
               </tr>
             @endforeach
           </tbody>
