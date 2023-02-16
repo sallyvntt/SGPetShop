@@ -187,7 +187,7 @@
 									<a href="{{Route('home')}}" class="link-term mercado-item-title">Shop</a>
 								</li>
 								<li class="menu-item">
-									<a href="cart.html" class="link-term mercado-item-title">Cart</a>
+									<a href="{{Route ('viewCart')}}" class="link-term mercado-item-title">Cart</a>
 								</li>
 								<li class="menu-item">
 									<a href="{{Route('checkout')}}" class="link-term mercado-item-title">Checkout</a>
