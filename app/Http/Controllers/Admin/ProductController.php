@@ -16,6 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $prods = Product::all();
+        
         return view('admin.product.index', compact('prods'));
     }
 
@@ -39,6 +40,7 @@ class ProductController extends Controller
     {
         $prodData = $request->all();
         $prodData['slug'] = \Str::slug($request->name);
+        
         // process upload
 
         if($request->hasFile('photo'))
