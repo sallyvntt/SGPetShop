@@ -21,9 +21,12 @@
 <section class="content">
 
   <!-- Default box -->
+        @php
+        $countorder=count($order);      
+        @endphp
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Order List</h3>
+      <h3 class="card-title">Having : {{$countorder}} in  Order List</h3>
 
       <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -49,6 +52,7 @@
                   </th>
               </tr>
           </thead>
+
           <tbody>
             @foreach($order as $item)
               <tr>
@@ -58,10 +62,7 @@
                   <td>{{ $item->shipping_name}}</td>
                   <td>{{ $item->shipping_phone}}</td>
                   <td>{{ $item->shipping_email}}</td>
-                  <td>{{ $item->shipping_address}}</td>
-
-
-          
+                  <td>{{ $item->shipping_address}}</td>        
                   <td class="project-actions text-right">
                     
                       <!-- <a class="btn btn-primary btn-sm" href="#">
