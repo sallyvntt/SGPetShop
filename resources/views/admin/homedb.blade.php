@@ -18,6 +18,7 @@
             @php
             $countprods=count($prods);
             $countorder=count($order);
+            $q = count($order->quantity);
             $countuser=count($user);
             @endphp
 </section>
