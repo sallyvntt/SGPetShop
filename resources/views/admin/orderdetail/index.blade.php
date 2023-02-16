@@ -22,8 +22,12 @@
 
   <!-- Default box -->
   <div class="card">
+                    @php                                      
+                    $money = $ord->price * $ord->quantity;
+                    @endphp
     <div class="card-header">
-      <h3 class="card-title">OrderDetail List</h3>
+      <h3 class="card-title">OrderDetail List {{count($money)}}</h3>
+
 
       <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -43,7 +47,7 @@
                   <th style="width: 20%">Price</th>  
                   <th style="width: 10%">Quantity</th>
                   <th>
-                   Count
+                  Total Money
                   </th>
                   
                   <th>
@@ -57,15 +61,11 @@
                   <td>{{ $item->product_id }}</td>   
                   <td>{{ $item->order_id }}</td>
                   
-                  <td>{{ $price=number_format($item->price) }}</td>
+                  <td>{{ number_format($item->price) }}</td>
                   <td>{{ $item->quantity }}</td>
-                  @php
-                  $total = $item->quantity;
-                  @endphp
-
-                  <td>{{ $total }}</td>              
+                  <td>{{ $money = number_format($item->price * $item->quantity) }}</td>              
                   <td class="project-actions text-right">
-                    
+            
                       <!-- <a class="btn btn-primary btn-sm" href="#">
                           <i class="fas fa-folder">
                           </i>
@@ -94,6 +94,7 @@
     <!-- /.card-body -->
   </div>
   <!-- /.card -->
+<h1></h1>
 
 </section>
 @endsection
