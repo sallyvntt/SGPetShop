@@ -15,6 +15,11 @@
       </div>
     </div>
   </div><!-- /.container-fluid -->
+            @php
+            $countprods=count($prods);
+            $countorder=count($order);
+            $countuser=count($user);
+            @endphp
 </section>
     <!-- Main content -->
     <section class="content">
@@ -25,7 +30,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>9999</h3>
+                <h3>{{$countorder}}</h3>
 
                 <p>Total Order</p>
               </div>
@@ -40,7 +45,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>9999<sup style="font-size: 20px"></sup></h3>
+                <h3>{{$countprods}}<sup style="font-size: 20px"></sup></h3>
 
                 <p>Total Product in Shope </p>
               </div>
@@ -70,7 +75,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>9999</h3>
+                <h3>{{$countorder}}</h3>
 
                 <p>Total Member</p>
               </div>
