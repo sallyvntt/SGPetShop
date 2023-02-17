@@ -168,7 +168,7 @@
 									<a href="{{Route('home')}}" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
 								</li>
 								<li class="menu-item">
-									<a href="{{Route('about')}}" class="link-term mercado-item-title">AboutUs</a>
+									<a href="{{Route('about')}}" class="link-term mercado-item-title">th</a>
 								</li>
 								<li class="menu-item">
 									<a href="{{Route('shop')}}" class="link-term mercado-item-title">Products</a>
