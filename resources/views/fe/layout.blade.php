@@ -184,7 +184,7 @@
 									<a href="about-us.html" class="link-term mercado-item-title">About Us</a>
 								</li>
 								<li class="menu-item">
-									<a href="{{Route('home')}}" class="link-term mercado-item-title">Shop</a>
+									<a href="{{Route('shop')}}" class="link-term mercado-item-title">Products</a>
 								</li>
 								<li class="menu-item">
 									<a href="{{Route ('viewCart')}}" class="link-term mercado-item-title">Cart</a>
