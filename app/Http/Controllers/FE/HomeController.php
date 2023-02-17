@@ -159,4 +159,12 @@ class HomeController extends Controller
     {
         return view ('fe.shop');
     }
+    public function about()
+    {
+        return view ('fe.about');
+    }
+    public function contact()
+    {
+        return view ('fe.contact');
+    }
 }
