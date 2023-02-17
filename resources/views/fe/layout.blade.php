@@ -42,39 +42,17 @@
 				<div class="topbar-menu-area">
 					<div class="container">
 						<div class="topbar-menu left-menu">
-							<ul>
+							<!-- <ul>
 								<li class="menu-item" >
 									<a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
 								</li>
-							</ul>
+							</ul> -->
 						</div>
 						<div class="topbar-menu right-menu">
 							<ul>
 								<li class="menu-item" ><a title="Register or Login" href="{{Route('login')}}">Login</a></li>
-								<li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>
-								<li class="menu-item lang-menu menu-item-has-children parent">
-									<a title="English" href="#"><span class="img label-before"><img src="{{asset('/assets/images/lang-en.png')}}" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-									<ul class="submenu lang" >
-										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
-										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
-										<li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
-										<li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-has-children parent" >
-									<a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-									<ul class="submenu curency" >
-										<li class="menu-item" >
-											<a title="Pound (GBP)" href="#">Pound (GBP)</a>
-										</li>
-										<li class="menu-item" >
-											<a title="Euro (EUR)" href="#">Euro (EUR)</a>
-										</li>
-										<li class="menu-item" >
-											<a title="Dollar (USD)" href="#">Dollar (USD)</a>
-										</li>
-									</ul>
-								</li>
+								<!-- <li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li> -->
+
 							</ul>
 						</div>
 					</div>
@@ -120,7 +98,7 @@
 						</div>
 
 						<div class="wrap-icon right-section">
-							<div class="wrap-icon-section wishlist">
+							<!-- <div class="wrap-icon-section wishlist">
 								<a href="#" class="link-direction">
 									<i class="fa fa-heart" aria-hidden="true"></i>
 									<div class="left-info">
@@ -128,7 +106,7 @@
 										<span class="title">Wishlist</span>
 									</div>
 								</a>
-							</div>
+							</div> -->
 							@php
 							$count = 0 ;
 							@endphp
@@ -146,6 +124,15 @@
 									<div class="left-info">
 										<span class="index">{{$count}}</span>
 										<span class="title">CART</span>
+									</div>
+								</a>
+							</div>
+							<div class="wrap-icon-section wishlist">
+								<a href="#" class="link-direction">
+									<i class="fa fa-heart" aria-hidden="true"></i>
+									<div class="left-info">
+										<span class="index">0 item</span>
+										<span class="title">Wishlist</span>
 									</div>
 								</a>
 							</div>
